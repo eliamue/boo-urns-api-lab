@@ -15,3 +15,5 @@ Quote.propTypes = {
   character: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
 };
+
+export default Quote;

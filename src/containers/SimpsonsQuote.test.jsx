@@ -1,7 +1,7 @@
 import React from 'react';
 import { fireEvent, render, screen, waitFor } from '@testing-library/react';
 // import userEvent from '@testing-library/user-event';
-import SimpsonsQuote from './SimpsonsQuote';
+import SimpsonsQuote from './SimpsonsQuote.jsx';
 import { rest } from 'msw';
 import { setupServer } from 'msw/node';
 
@@ -15,7 +15,6 @@ const server = setupServer(
             quote: 'Ah, be creative. Instead of making sandwhiches with bread, use Pop-Tarts. Instead of chewing gum, chew bacon.',
             character: 'Dr. Nick',
             image: 'https://cdn.glitch.com/3c3ffadc-3406-4440-bb95-d40ec8fcde72%2FNickRiviera.png?1497567511084',
-            characterDirection: 'Right',
           },
         ])
       );
