@@ -1,12 +1,10 @@
-const getQuote = () => {
-  return fetch('https://thesimpsonsquoteapi.glitch.me/quotes')
-    .then((res) => res.json())
-    .then((json) =>
-      json.data.map((quote) => ({
-        quote: quote.quote,
-        character: quote.character,
-        image: quote.image,
-      }))
-    );
+export const getQuote = async () => {
+  const res = await fetch('https://thesimpsonsquoteapi.glitch.me/quotes');
+  const [quote] = await res.json();
+
+  return {
+    quote: quote.quote,
+    character: quote.character,
+    image: quote.image,
+  };
 };
-export default getQuote;
